@@ -14,7 +14,7 @@ router.get('/', async function(req, res, next) {
 
 router.get('/:id', async function(req, res, next) {
     try {
-        const iResults = await db.query(`SELECT id, amt, paid, add_date, paid_date, FROM invoices
+        const iResults = await db.query(`SELECT id, amt, paid, add_date, paid_date FROM invoices
         WHERE id=$1`, [req.params.id])
         const iCompCodes = await db.query(`SELECT comp_code FROM invoices WHERE id=$1` [req.params.id])
         if(iResults.rows.length === 0){
