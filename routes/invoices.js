@@ -42,7 +42,7 @@ router.post('/', async function(req, res, next) {
     }
 })
 
-router.post('/:id', async function(req, res, next) {
+router.put('/:id', async function(req, res, next) {
     try {
         const results = await db.query(`UPDATE invoices SET amt=$1 WHERE id=$2
         RETURNING id, comp_code, amt, paid, add_date, paid_date`, [req.body.amt, req.params.id])
