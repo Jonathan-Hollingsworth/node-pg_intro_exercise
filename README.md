@@ -1,6 +1,6 @@
 # node-pg_intro_exercise
 
-This application utilizes two main routes to interact with the `biztime` database.  
+This application utilizes two main routes to interact with the `biztime` database. (You will have to create it)  
 
 ## `/Companies`
 
