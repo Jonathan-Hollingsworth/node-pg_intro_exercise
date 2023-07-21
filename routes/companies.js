@@ -21,7 +21,7 @@ router.get('/:code', async function(req, res, next) {
             throw new ExpressError('Company could not be found', 404)
         }
         cResults.rows[0].invoices = iResults.rows
-        return res.json({company: results.rows[0]})
+        return res.json({company: cResults.rows[0]})
     } catch (error) {
         return next(error)
     }
